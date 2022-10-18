@@ -23,14 +23,12 @@ int printS(va_list list)
 			_puts("\\x");
 			count = count + 2;
 			if (!string[1])
-				_putchar('0');
-			count++;
+				count += _putchar('0');
 			count += _puts(string);
 		}
 		else
 		{
-			_putchar(str[i]);
-			count++;
+			count += _putchar(str[i]);
 		}
 	}
 	return (count);
@@ -49,6 +47,8 @@ int printp(va_list list)
 	unsigned long int x = va_arg(list, unsigned long int);
 
 	string = convert(x, 16, 1);
+	if (string == NULL)
+		count += _puts("(nil)");
 	count += _puts("0x");
 	count += _puts(string);
 	return (count);
