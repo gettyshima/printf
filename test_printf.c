@@ -1,5 +1,12 @@
 #include "main.h"
-void (*match(char c))(va_list)
+#include <stdlib.h>
+/**
+ * match- to match the characters with the right function
+ * @c: character that determines the function to use
+ * @va_list: variable list name
+ * Return: no return type
+ */
+int (*match(char c))(va_list)
 {
 	specifiers arr[] = {
 		{'c', print_c},
@@ -15,7 +22,6 @@ void (*match(char c))(va_list)
 		{'b', print_b},
 		{'d', print_d},
 		{'i', print_i},
-		{NULL, NULL},
 	};
 	int i;
 
@@ -26,6 +32,7 @@ void (*match(char c))(va_list)
 			arr[i].ptr;
 		}
 	}
+	return (arr[i].ptr);
 }
 
 
