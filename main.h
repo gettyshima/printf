@@ -21,7 +21,7 @@ int printr(va_list list);
 int printR(va_list list);
 void print_unsign(unsigned int n);
 void print_long(unsigned long int n);
-void print_su(unsigned long int n);
+void print_su(unsigned short n);
 void print_id(int n);
 int print_X(va_list list);
 int print_x(va_list list);
@@ -33,5 +33,7 @@ int print_b(va_list list);
 int print_s(va_list list);
 int print_c(va_list list);
 int _printf(const char *format, ...);
+int (*match(const char c))(va_list);
+
 
 #endif

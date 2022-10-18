@@ -6,7 +6,8 @@
  * @va_list: variable list name
  * Return: no return type
  */
-int (*match(char c))(va_list)
+
+int (*match(const char c))(va_list)
 {
 	specifiers arr[] = {
 		{'c', print_c},
@@ -29,10 +30,10 @@ int (*match(char c))(va_list)
 	{
 		if (c == arr[i].c)
 		{
-			arr[i].ptr;
+			return (arr[i].ptr);
 		}
 	}
-	return (arr[i].ptr);
+	return (NULL);
 }
 
 

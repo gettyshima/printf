@@ -28,7 +28,7 @@ int print_b(va_list list)
 	char *s;
 
 	b = va_arg(list, unsigned int);
-	s = convert(x, 2, 0);
+	s = convert(b, 2, 0);
 	_puts(s);
 	count = _puts(s);
 	return (count);
@@ -45,7 +45,7 @@ int print_c(va_list list)
 
 	c = (char)va_arg(list, int);
 	_putchar(c);
-	count = _puchar(c);
+	count = _putchar(c);
 	return (count);
 }
 /**

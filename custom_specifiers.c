@@ -12,10 +12,11 @@ int printS(va_list list)
 	char *string;
 	int a;
 	char *str = va_arg(list, char *);
+	int count = 0;
 
 	if (str == NULL)
 		return (_puts("(null)"));
-	for (a = 0; str[a]; a++)
+	for (i = 0; str[i]; i++)
 	{
 		if (str[i] > 0  && (str[i] < 32 || str[i] >= 127))
 		{
@@ -44,6 +45,8 @@ int printS(va_list list)
 
 int printp(va_list list)
 {
+	int count = 0;
+	char *string;
 	unsigned long int x = va_arg(list, unsigned long int);
 	int count;
 
@@ -82,9 +85,9 @@ int printR(va_list list)
 	int i, j;
 	char rot[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char ROT[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	char *str = va_arg(l, char *);
+	char *s = va_arg(list, char *);
 
-	for (j = 0; str[j]; j++)
+	for (j = 0; s[j]; j++)
 	{
 		if (s[j] < 'A' || (s[j] > 'Z' && s[j] < 'a') || s[j] > 'z')
 			_putchar(s[j]);
@@ -97,6 +100,6 @@ int printR(va_list list)
 			}
 		}
 	}
-	return (_strlen(str));
+	return (_strlen(s));
 }
 

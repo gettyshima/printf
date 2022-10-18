@@ -35,7 +35,7 @@ void print_long(unsigned long int n)
 void print_su(unsigned short int n)
 {
 	if (n / 10)
-		print_short(n / 10);
+		print_su(n / 10);
 	_putchar(n % 10);
 }
 
