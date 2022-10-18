@@ -22,5 +22,4 @@ int print_u(va_list list);
 int print_d(va_list list);
 int print_i(va_list list);
 
-
 #endif
