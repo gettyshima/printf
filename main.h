@@ -4,6 +4,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/**
+  *struct structure - the struct
+  *
+  *@c: the character
+  *@ptr: the function pointer
+  */
+
 typedef struct structure
 {
 	const char c;

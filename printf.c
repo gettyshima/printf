@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 				continue;
 			}
 			ptr = match(format[i]);
-			if (ptr == '\0')
+			if (ptr == NULL)
 			{
 				_putchar('%');
 				_putchar(format[i]);
