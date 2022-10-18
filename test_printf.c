@@ -1,5 +1,5 @@
 #include "main.h"
-void (*match(char c))(va_list)
+int (*match(const char c))(va_list)
 {
 	specifiers arr[] = {
 		{'c', print_c},
@@ -23,9 +23,10 @@ void (*match(char c))(va_list)
 	{
 		if (c == arr[i].c)
 		{
-			arr[i].ptr;
+			return (arr[i].ptr);
 		}
 	}
+	return (NULL);
 }
 
 

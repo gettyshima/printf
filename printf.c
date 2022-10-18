@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	int (*ptr)(va_list);
 
 	va_start(list, format);
-	if (!format || format[0] == '%' && !format[1])
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(fotmat[i]);
+			_putchar(format[i]);
 			count++;
 		}
 	}
