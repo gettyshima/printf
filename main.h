@@ -6,7 +6,7 @@
 
 typedef struct structure
 {
-	char c;
+	const char c;
 	int (*ptr)(va_list);
 } specifiers;
 

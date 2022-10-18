@@ -10,7 +10,6 @@ int printS(va_list list)
 {
 	unsigned int i;
 	char *string;
-	int a;
 	char *str = va_arg(list, char *);
 	int count = 0;
 
@@ -48,11 +47,10 @@ int printp(va_list list)
 	int count = 0;
 	char *string;
 	unsigned long int x = va_arg(list, unsigned long int);
-	int count;
 
 	string = convert(x, 16, 0);
-	count = _puts("0x");
-	count =_puts(string);
+	count += _puts("0x");
+	count +=_puts(string);
 	return (count);
 }
 
