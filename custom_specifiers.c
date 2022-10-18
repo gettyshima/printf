@@ -50,7 +50,7 @@ int printp(va_list list)
 
 	string = convert(x, 16, 0);
 	count += _puts("0x");
-	count += _puts(string);
+	count +=_puts(string);
 	return (count);
 }
 

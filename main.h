@@ -6,7 +6,7 @@
 
 typedef struct structure
 {
-	char *c;
+	const char c;
 	int (*ptr)(va_list);
 } specifiers;
 
@@ -34,5 +34,6 @@ int print_s(va_list list);
 int print_c(va_list list);
 int _printf(const char *format, ...);
 int (*match(const char c))(va_list);
+
 
 #endif
