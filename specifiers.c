@@ -96,5 +96,17 @@ int print_i(va_list list)
 	count = count_digit(i);
 	return (count);
 }
+int print_b(va_list list)
+{
+	int count = 0;
+	unsigned int b;
+	char *s;
+
+	b = va_arg(list, unsigned int);
+	s = convert(x, 2, 0);
+	_puts(s);
+	count = _puts(s);
+	return (count);
+}
 
 
