@@ -23,7 +23,7 @@ int printS(va_list list)
 			_puts("\\x");
 			count = count + 2;
 			if (!string[1])
-				return (_putchar('0');
+				return (_putchar('0'));
 			count += _puts(string);
 		}
 		else
@@ -48,7 +48,7 @@ int printp(va_list list)
 
 	string = convert(x, 16, 1);
 	if (string == NULL)
-		return (_puts("(nil)");
+		return (_puts("(nil)"));
 	count += _puts("0x");
 	count += _puts(string);
 	return (count);
