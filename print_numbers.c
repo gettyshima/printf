@@ -27,7 +27,7 @@ void print_long(unsigned long int n)
 }
 
 /**
- *print_su - prints long unsigned
+ *print_su - prints short unsigned
  *@n: the number
  *Return: nothing
  */
@@ -47,8 +47,22 @@ void print_su(unsigned short int n)
 
 void print_id(int n)
 {
-	if (n / 10)
-		putchar(n / 10);
-	_putchar(n % 10);
+	unsigned int m;
+
+	m = 0;
+	if (n < 0)
+	{
+		m = -n;
+		_putchar('-');
+	}
+	else
+	{
+		m = n;
+	}
+	if (m / 10)
+	{
+		print_id(m / 10);
+	}
+	_putchar((m % 10) + '0');
 }
 

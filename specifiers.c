@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-  *printX - prints upper hexadecimal
+  *print_X - prints upper hexadecimal
   *@list: the arg
   *Return: the number of string
   */
 
-int printX(va_list list)
+int print_X(va_list list)
 {
 	int count = 0;
 	char *str;
@@ -18,12 +18,12 @@ int printX(va_list list)
 }
 
 /**
-  *printx - print lower hex
+  *print_x - print lower hex
   *@list: the arg
   *Return: the number of string
   */
 
-int printx(va_list list)
+int print_x(va_list list)
 {
 	int count = 0;
 	char *str;
@@ -35,12 +35,12 @@ int printx(va_list list)
 }
 
 /**
-  *printo - prints oct
+  *print_o - prints oct
   *@list: the arg
   *Return: the lenght of the string
   */
 
-int printo(va_list list)
+int print_o(va_list list)
 {
 	int count = 0;
 	char *str;
@@ -52,12 +52,12 @@ int printo(va_list list)
 }
 
 /**
-  *printu - prints unsigned int
+  *print_u - prints unsigned int
   *@list: the arg
   *Return: the number of int
   */
 
-int printu(va_list list)
+int print_u(va_list list)
 {
 	int count = 0;
 	unsigned int x = va_arg(list, unsigned int);
@@ -66,3 +66,35 @@ int printu(va_list list)
 	count = count_digit(x);
 	return (count);
 }
+/**
+ * print_d- prints decimal
+ * @list: variable argument list
+ * Return: returns number of decimals printed
+ */
+int print_d(va_list list)
+{
+	int count = 0;
+	int d;
+
+	d = va_arg(list, int);
+	print_id(d);
+	count = count_digit(d);
+	return (count);
+}
+/**
+ * print_i- prints integers
+ * @list: variable argument list
+ * Return: number of integers printed
+ */
+int print_i(va_list list)
+{
+	int count = 0;
+	int i;
+
+	i = va_arg(list, int);
+	print_id(i);
+	count = count_digit(i);
+	return (count);
+}
+
+
