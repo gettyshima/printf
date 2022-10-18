@@ -21,5 +21,8 @@ int print_o(va_list list);
 int print_u(va_list list);
 int print_d(va_list list);
 int print_i(va_list list);
+int print_b(va_list list);
+int print_s(va_list list);
+int print_c(va_list list);
 
 #endif
