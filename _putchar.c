@@ -15,7 +15,7 @@ int _putchar(char c)
 		buffer[i] = c;
 		i++;
 	}
-	return (write(1, &buffer, i));
+	return (write(1, &buffer, i);
 }
 /**
  * _strlen- to know the length of a string
