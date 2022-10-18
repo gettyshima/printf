@@ -47,7 +47,7 @@ void print_su(unsigned short int n)
 
 void print_id(int n)
 {
-	unsigned int m;
+	int m;
 
 	m = 0;
 	if (n < 0)
