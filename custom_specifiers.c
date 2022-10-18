@@ -46,7 +46,7 @@ int printp(va_list list)
 	char *string;
 	unsigned long int x = va_arg(list, unsigned long int);
 
-	if (x == NULL)
+	if (!x)
 		return (_puts("(nil)"));
 	string = convert(x, 16, 1);
 	count += _puts("0x");
