@@ -29,7 +29,6 @@ int print_b(va_list list)
 
 	b = va_arg(list, unsigned int);
 	s = convert(b, 2, 0);
-	_puts(s);
 	count = _puts(s);
 	return (count);
 }
@@ -58,6 +57,8 @@ int print_s(va_list list)
 	char *s;
 
 	s = va_arg(list, char *);
+	if (s == NULL)
+		s = "(null)";
 	count = _puts(s);
 	return (count);
 }

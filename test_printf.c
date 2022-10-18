@@ -3,7 +3,6 @@
 /**
  * match- to match the characters with the right function
  * @c: character that determines the function to use
- * @va_list: variable list name
  * Return: no return type
  */
 
