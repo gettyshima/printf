@@ -7,15 +7,8 @@
  */
 int _putchar(char c)
 {
-	static char buffer[1024];
-	static int i = 0;
-
-	if (i < 1024)
-	{
-		buffer[i] = c;
-		i++;
-	}
-	return (write(1, &buffer, i));
+	write(1, &c, 1);
+	return (1);
 }
 /**
  * _strlen- to know the length of a string
@@ -37,6 +30,10 @@ int _strlen(char *s)
  */
 int _puts(char *s)
 {
-	return (write(1, s, _strlen(s)));
+	register int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		_putchar(s[i]);
+	return (i);
 }
 

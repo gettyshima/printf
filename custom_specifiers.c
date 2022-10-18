@@ -48,9 +48,9 @@ int printp(va_list list)
 	char *string;
 	unsigned long int x = va_arg(list, unsigned long int);
 
-	string = convert(x, 16, 0);
+	string = convert(x, 16, 1);
 	count += _puts("0x");
-	count +=_puts(string);
+	count += _puts(string);
 	return (count);
 }
 
@@ -100,4 +100,3 @@ int printR(va_list list)
 	}
 	return (_strlen(s));
 }
-

@@ -31,7 +31,14 @@ int _printf(const char *format, ...)
 				continue;
 			}
 			ptr = match(format[i]);
-			count += ptr(list);
+			if (ptr == '\0')
+			{
+				_putchar('%');
+				_putchar(format[i]);
+				count += 2;
+			}
+			else
+				count += ptr(list);
 		}
 		else
 		{
