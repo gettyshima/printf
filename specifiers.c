@@ -12,6 +12,7 @@ int print_X(va_list list)
 	char *str;
 	unsigned int x = va_arg(list, unsigned int);
 
+
 	str = convert(x, 16, 0);
 	count = _puts(str);
 	return (count);
@@ -77,6 +78,7 @@ int print_d(va_list list)
 	int d;
 
 	d = va_arg(list, int);
+	if (d <= 
 	print_id(d);
 	count = count_digit(d);
 	return (count);
