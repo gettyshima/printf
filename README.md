@@ -17,6 +17,8 @@ The available convertion specifiers are:
 %X: Prints the hexadecial representation of an unsigned decimal in uppercase letters
 %r: Prints a reversed string
 %R: Prints the Rot13 interpretation of a string
+    Other special features of the printf function includes
+Width, flags and precision specifier.
 
 #AUTHORS:
 Gertrude Ahemba and Tabitha Imafidon
