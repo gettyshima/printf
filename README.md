@@ -19,6 +19,7 @@ The available convertion specifiers are:
 %R: Prints the Rot13 interpretation of a string
     Other special features of the printf function includes
 Width, flags and precision specifier.
+   All these add special features to the printf function.
 
 #AUTHORS:
 Gertrude Ahemba and Tabitha Imafidon
